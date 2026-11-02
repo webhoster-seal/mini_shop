@@ -426,8 +426,6 @@ main section {
 }
 
 .price-history {
-    display: grid;
-    gap: 4px;
     margin: 8px 0;
     padding: 10px 12px;
     border-left: 3px solid var(--accent);
@@ -437,8 +435,74 @@ main section {
     font-size: 0.83rem;
 }
 
-.price-history strong {
+.price-timeline-title {
+    margin: 0 0 10px;
     color: var(--text);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.price-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.price-timeline li {
+    position: relative;
+    display: grid;
+    gap: 3px;
+    padding-top: 10px;
+}
+
+.price-timeline li::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    content: '';
+}
+
+.price-timeline li:not(:last-child)::after {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    width: calc(100% - 3px);
+    height: 1px;
+    background: color-mix(in srgb, var(--accent) 55%, var(--line));
+    content: '';
+}
+
+.price-timeline time {
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 0.68rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.price-timeline strong {
+    color: var(--text);
+    font-size: 0.72rem;
+}
+
+.price-timeline .current-price::before {
+    width: 9px;
+    height: 9px;
+    top: 1px;
+    background: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.price-timeline .current-price strong {
+    color: var(--primary);
 }
 
 .stars {
