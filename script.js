@@ -20,6 +20,7 @@ const formStatus = document.getElementById('formStatus');
 const backToTop = document.getElementById('backToTop');
 const navLinks = document.getElementById('navLinks');
 const menuToggle = document.getElementById('menuToggle');
+const averagePrice = document.getElementById('averagePrice');
 
 // Formats a number as Indian rupees.
 function formatCurrency(amount) {
@@ -149,6 +150,15 @@ function sortProducts() {
     }
 
     cards.forEach((card) => productGrid.appendChild(card));
+}
+
+// Shows the average of the listed product prices in the price statistics panel.
+function updatePriceStatistics() {
+    const cards = Array.from(document.querySelectorAll('.product-card'));
+    const totalPrice = cards.reduce((total, card) => total + Number(card.dataset.price), 0);
+    const listedAverage = cards.length ? totalPrice / cards.length : 0;
+
+    averagePrice.textContent = formatCurrency(listedAverage);
 }
 
 // Creates star text for a numeric review rating.
@@ -354,6 +364,7 @@ function initializePage() {
 
     setupSmoothNavigation();
     updateCartSummary();
+    updatePriceStatistics();
     updateCharacterCounter();
     loadReviews();
     window.setTimeout(hideLoader, 450);

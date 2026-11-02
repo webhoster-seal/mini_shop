@@ -62,14 +62,27 @@
                 </select>
             </div>
 
+            <aside class="price-statistics" aria-labelledby="priceStatisticsTitle">
+                <div>
+                    <p class="eyebrow">Price statistics</p>
+                    <h3 id="priceStatisticsTitle">Average product price</h3>
+                </div>
+                <p class="average-price" id="averagePrice" aria-live="polite">₹0</p>
+                <p class="statistics-note">Based on the current listed price of all products.</p>
+            </aside>
+
             <div class="product-grid" id="productGrid">
-                <article class="product-card" data-product-id="smartphone" data-name="Smartphone" data-price="25000">
+                <article class="product-card" data-product-id="smartphone" data-name="Smartphone" data-price="25000" data-last-month-price="26500" data-last-year-price="29999" data-seller-name="Nova Electronics" data-seller-address="42 Market Street, Andheri East" data-seller-location="Mumbai, Maharashtra 400069" data-seller-phone="+91 98765 41021" data-seller-email="support@novaelectronics.example">
                     <button class="wishlist-button" type="button" aria-label="Add Smartphone to wishlist">&#9825;</button>
                     <img src="images/phone.jpg" alt="Smartphone product image">
                     <div class="product-details">
                         <span class="stock in-stock">In Stock</span>
                         <h3>Smartphone</h3>
                         <p class="price" data-base-price="25000">&#8377;25,000</p>
+                        <div class="price-history" aria-label="Smartphone price history">
+                            <span>Last month: <strong>₹26,500</strong></span>
+                            <span>Last year: <strong>₹29,999</strong></span>
+                        </div>
                         <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                         <p class="quantity-line">Quantity: <span class="quantity">1</span></p>
                         <p class="line-total">Live Price: <span>&#8377;25,000</span></p>
@@ -79,16 +92,30 @@
                             <button class="add-cart" type="button">Add to Cart</button>
                             <button class="discount" type="button">Apply 10% Discount</button>
                         </div>
+                        <details class="seller-details">
+                            <summary>Seller details</summary>
+                            <dl>
+                                <div><dt>Seller</dt><dd>Nova Electronics</dd></div>
+                                <div><dt>Address</dt><dd>42 Market Street, Andheri East</dd></div>
+                                <div><dt>Location</dt><dd>Mumbai, Maharashtra 400069</dd></div>
+                                <div><dt>Phone</dt><dd><a href="tel:+919876541021">+91 98765 41021</a></dd></div>
+                                <div><dt>Email</dt><dd><a href="mailto:support@novaelectronics.example">support@novaelectronics.example</a></dd></div>
+                            </dl>
+                        </details>
                     </div>
                 </article>
 
-                <article class="product-card" data-product-id="laptop" data-name="Laptop" data-price="55000">
+                <article class="product-card" data-product-id="laptop" data-name="Laptop" data-price="55000" data-last-month-price="57500" data-last-year-price="62999" data-seller-name="ByteCraft Computers" data-seller-address="18 Tech Park Road, Koramangala" data-seller-location="Bengaluru, Karnataka 560034" data-seller-phone="+91 98450 88214" data-seller-email="help@bytecraft.example">
                     <button class="wishlist-button" type="button" aria-label="Add Laptop to wishlist">&#9825;</button>
                     <img src="images/laptop.jpg" alt="Laptop product image">
                     <div class="product-details">
                         <span class="stock in-stock">In Stock</span>
                         <h3>Laptop</h3>
                         <p class="price" data-base-price="55000">&#8377;55,000</p>
+                        <div class="price-history" aria-label="Laptop price history">
+                            <span>Last month: <strong>₹57,500</strong></span>
+                            <span>Last year: <strong>₹62,999</strong></span>
+                        </div>
                         <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                         <p class="quantity-line">Quantity: <span class="quantity">1</span></p>
                         <p class="line-total">Live Price: <span>&#8377;55,000</span></p>
@@ -98,16 +125,30 @@
                             <button class="add-cart" type="button">Add to Cart</button>
                             <button class="discount" type="button">Apply 10% Discount</button>
                         </div>
+                        <details class="seller-details">
+                            <summary>Seller details</summary>
+                            <dl>
+                                <div><dt>Seller</dt><dd>ByteCraft Computers</dd></div>
+                                <div><dt>Address</dt><dd>18 Tech Park Road, Koramangala</dd></div>
+                                <div><dt>Location</dt><dd>Bengaluru, Karnataka 560034</dd></div>
+                                <div><dt>Phone</dt><dd><a href="tel:+919845088214">+91 98450 88214</a></dd></div>
+                                <div><dt>Email</dt><dd><a href="mailto:help@bytecraft.example">help@bytecraft.example</a></dd></div>
+                            </dl>
+                        </details>
                     </div>
                 </article>
 
-                <article class="product-card" data-product-id="earbuds" data-name="Wireless Earbuds" data-price="3000">
+                <article class="product-card" data-product-id="earbuds" data-name="Wireless Earbuds" data-price="3000" data-last-month-price="3250" data-last-year-price="3799" data-seller-name="SoundSphere Retail" data-seller-address="7 Lake View Avenue, Salt Lake" data-seller-location="Kolkata, West Bengal 700091" data-seller-phone="+91 98310 65742" data-seller-email="care@soundsphere.example">
                     <button class="wishlist-button" type="button" aria-label="Add Wireless Earbuds to wishlist">&#9825;</button>
                     <img src="images/earbuds.jpg" alt="Wireless earbuds product image">
                     <div class="product-details">
                         <span class="stock low-stock">Only 8 Left</span>
                         <h3>Wireless Earbuds</h3>
                         <p class="price" data-base-price="3000">&#8377;3,000</p>
+                        <div class="price-history" aria-label="Wireless Earbuds price history">
+                            <span>Last month: <strong>₹3,250</strong></span>
+                            <span>Last year: <strong>₹3,799</strong></span>
+                        </div>
                         <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                         <p class="quantity-line">Quantity: <span class="quantity">1</span></p>
                         <p class="line-total">Live Price: <span>&#8377;3,000</span></p>
@@ -117,16 +158,30 @@
                             <button class="add-cart" type="button">Add to Cart</button>
                             <button class="discount" type="button">Apply 10% Discount</button>
                         </div>
+                        <details class="seller-details">
+                            <summary>Seller details</summary>
+                            <dl>
+                                <div><dt>Seller</dt><dd>SoundSphere Retail</dd></div>
+                                <div><dt>Address</dt><dd>7 Lake View Avenue, Salt Lake</dd></div>
+                                <div><dt>Location</dt><dd>Kolkata, West Bengal 700091</dd></div>
+                                <div><dt>Phone</dt><dd><a href="tel:+919831065742">+91 98310 65742</a></dd></div>
+                                <div><dt>Email</dt><dd><a href="mailto:care@soundsphere.example">care@soundsphere.example</a></dd></div>
+                            </dl>
+                        </details>
                     </div>
                 </article>
 
-                <article class="product-card" data-product-id="smartwatch" data-name="Smartwatch" data-price="7000">
+                <article class="product-card" data-product-id="smartwatch" data-name="Smartwatch" data-price="7000" data-last-month-price="7600" data-last-year-price="8999" data-seller-name="TimeTech Hub" data-seller-address="25 Park Lane, Sector 17" data-seller-location="Chandigarh 160017" data-seller-phone="+91 98720 34590" data-seller-email="support@timetechhub.example">
                     <button class="wishlist-button" type="button" aria-label="Add Smartwatch to wishlist">&#9825;</button>
                     <img src="images/smartwatch.jpg" alt="Smartwatch product image">
                     <div class="product-details">
                         <span class="stock in-stock">In Stock</span>
                         <h3>Smartwatch</h3>
                         <p class="price" data-base-price="7000">&#8377;7,000</p>
+                        <div class="price-history" aria-label="Smartwatch price history">
+                            <span>Last month: <strong>₹7,600</strong></span>
+                            <span>Last year: <strong>₹8,999</strong></span>
+                        </div>
                         <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                         <p class="quantity-line">Quantity: <span class="quantity">1</span></p>
                         <p class="line-total">Live Price: <span>&#8377;7,000</span></p>
@@ -136,16 +191,30 @@
                             <button class="add-cart" type="button">Add to Cart</button>
                             <button class="discount" type="button">Apply 10% Discount</button>
                         </div>
+                        <details class="seller-details">
+                            <summary>Seller details</summary>
+                            <dl>
+                                <div><dt>Seller</dt><dd>TimeTech Hub</dd></div>
+                                <div><dt>Address</dt><dd>25 Park Lane, Sector 17</dd></div>
+                                <div><dt>Location</dt><dd>Chandigarh 160017</dd></div>
+                                <div><dt>Phone</dt><dd><a href="tel:+919872034590">+91 98720 34590</a></dd></div>
+                                <div><dt>Email</dt><dd><a href="mailto:support@timetechhub.example">support@timetechhub.example</a></dd></div>
+                            </dl>
+                        </details>
                     </div>
                 </article>
 
-                <article class="product-card" data-product-id="tablet" data-name="Tablet" data-price="18000">
+                <article class="product-card" data-product-id="tablet" data-name="Tablet" data-price="18000" data-last-month-price="19400" data-last-year-price="21999" data-seller-name="Pixel Point Store" data-seller-address="61 MG Road, Indiranagar" data-seller-location="Bengaluru, Karnataka 560038" data-seller-phone="+91 99010 77832" data-seller-email="assist@pixelpoint.example">
                     <button class="wishlist-button" type="button" aria-label="Add Tablet to wishlist">&#9825;</button>
                     <img src="images/tablet.jpg" alt="Tablet product image">
                     <div class="product-details">
                         <span class="stock in-stock">In Stock</span>
                         <h3>Tablet</h3>
                         <p class="price" data-base-price="18000">&#8377;18,000</p>
+                        <div class="price-history" aria-label="Tablet price history">
+                            <span>Last month: <strong>₹19,400</strong></span>
+                            <span>Last year: <strong>₹21,999</strong></span>
+                        </div>
                         <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                         <p class="quantity-line">Quantity: <span class="quantity">1</span></p>
                         <p class="line-total">Live Price: <span>&#8377;18,000</span></p>
@@ -155,16 +224,30 @@
                             <button class="add-cart" type="button">Add to Cart</button>
                             <button class="discount" type="button">Apply 10% Discount</button>
                         </div>
+                        <details class="seller-details">
+                            <summary>Seller details</summary>
+                            <dl>
+                                <div><dt>Seller</dt><dd>Pixel Point Store</dd></div>
+                                <div><dt>Address</dt><dd>61 MG Road, Indiranagar</dd></div>
+                                <div><dt>Location</dt><dd>Bengaluru, Karnataka 560038</dd></div>
+                                <div><dt>Phone</dt><dd><a href="tel:+919901077832">+91 99010 77832</a></dd></div>
+                                <div><dt>Email</dt><dd><a href="mailto:assist@pixelpoint.example">assist@pixelpoint.example</a></dd></div>
+                            </dl>
+                        </details>
                     </div>
                 </article>
 
-                <article class="product-card" data-product-id="speaker" data-name="Bluetooth Speaker" data-price="4500">
+                <article class="product-card" data-product-id="speaker" data-name="Bluetooth Speaker" data-price="4500" data-last-month-price="4800" data-last-year-price="5499" data-seller-name="Audio Avenue" data-seller-address="9 Riverfront Plaza, Ashram Road" data-seller-location="Ahmedabad, Gujarat 380009" data-seller-phone="+91 98980 45176" data-seller-email="hello@audioavenue.example">
                     <button class="wishlist-button" type="button" aria-label="Add Bluetooth Speaker to wishlist">&#9825;</button>
                     <img src="images/speaker.jpg" alt="Bluetooth speaker product image">
                     <div class="product-details">
                         <span class="stock low-stock">Only 5 Left</span>
                         <h3>Bluetooth Speaker</h3>
                         <p class="price" data-base-price="4500">&#8377;4,500</p>
+                        <div class="price-history" aria-label="Bluetooth Speaker price history">
+                            <span>Last month: <strong>₹4,800</strong></span>
+                            <span>Last year: <strong>₹5,499</strong></span>
+                        </div>
                         <p class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
                         <p class="quantity-line">Quantity: <span class="quantity">1</span></p>
                         <p class="line-total">Live Price: <span>&#8377;4,500</span></p>
@@ -174,6 +257,16 @@
                             <button class="add-cart" type="button">Add to Cart</button>
                             <button class="discount" type="button">Apply 10% Discount</button>
                         </div>
+                        <details class="seller-details">
+                            <summary>Seller details</summary>
+                            <dl>
+                                <div><dt>Seller</dt><dd>Audio Avenue</dd></div>
+                                <div><dt>Address</dt><dd>9 Riverfront Plaza, Ashram Road</dd></div>
+                                <div><dt>Location</dt><dd>Ahmedabad, Gujarat 380009</dd></div>
+                                <div><dt>Phone</dt><dd><a href="tel:+919898045176">+91 98980 45176</a></dd></div>
+                                <div><dt>Email</dt><dd><a href="mailto:hello@audioavenue.example">hello@audioavenue.example</a></dd></div>
+                            </dl>
+                        </details>
                     </div>
                 </article>
             </div>
@@ -231,8 +324,12 @@
                 <p class="eyebrow">Support</p>
                 <h2>Contact</h2>
             </div>
-            <p>Email: <a href="mailto:support@minielectronicstore.test">support@minielectronicstore.test</a></p>
-            <p>Phone: <a href="tel:+910000000000">+91 00000 00000</a></p>
+            <p class="contact-intro">Need help with an order or a seller? Our support team is available to everyone—no sign-in required.</p>
+            <div class="support-details">
+                <p><strong>Email</strong><a href="mailto:support@minielectronicstore.example">support@minielectronicstore.example</a></p>
+                <p><strong>Phone</strong><a href="tel:+9118005550148">+91 1800 555 0148</a></p>
+                <p><strong>Support hours</strong><span>Monday–Saturday, 9:00 AM–6:00 PM IST</span></p>
+            </div>
         </section>
     </main>
 
